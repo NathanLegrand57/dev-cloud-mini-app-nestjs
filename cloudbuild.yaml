@@ -1,0 +1,25 @@
+steps:
+  - name: 'node:20-alpine'
+    entrypoint: 'npm'
+    args: ['ci']
+
+  - name: 'node:20-alpine'
+    entrypoint: 'npm'
+    args: ['test']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-f'
+      - 'dev.dockerfile'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/mini-app-nestjs:latest'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/mini-app-nestjs:latest'
+
+images:
+  - 'gcr.io/$PROJECT_ID/mini-app-nestjs:latest'
