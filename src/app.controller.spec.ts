@@ -15,9 +15,9 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "An error occurred. Please check the logs for details."', () => {
+    it('should return "An error occurred. Please check the logs for details. Tessst"', () => {
       expect(appController.getError()).toBe(
-        'An error occurred. Please check the logs for details.',
+        'An error occurred. Please check the logs for details. Tessst',
       );
     });
   });
