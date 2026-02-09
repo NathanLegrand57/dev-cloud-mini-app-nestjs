@@ -21,6 +21,21 @@ steps:
       - 'push'
       - 'gcr.io/$PROJECT_ID/mini-app-nestjs:$SHORT_SHA'
 
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'mini-app-nestjs'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/mini-app-nestjs:$SHORT_SHA'
+      - '--platform'
+      - 'managed'
+      - '--port'
+      - '3000'
+      - '--allow-unauthenticated'
+      - '--region'
+      - 'europe-west1'
+
 images:
   - 'gcr.io/$PROJECT_ID/mini-app-nestjs:$SHORT_SHA'
 
