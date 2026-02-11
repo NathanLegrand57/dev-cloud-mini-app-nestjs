@@ -10,12 +10,11 @@ export class AppController {
   getHealth(): object {
     return { status: 'ok' };
   }
-
+// Test
   @Get('api/food')
   async getFoodList() {
     try {
       const path = join(process.cwd(), 'src', 'foods', 'data', 'food.json');
-      console.log('Reading food data from:', path);
       const foodData = await readFile(path, 'utf-8');
       console.log('Food data retrieved successfully', foodData);
       return JSON.parse(foodData);
