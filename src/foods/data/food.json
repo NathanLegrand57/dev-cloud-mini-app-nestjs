@@ -3,5 +3,6 @@
     { "id": 2, "name": "Classic burger", "description": "Burger classique" },
     { "id": 3, "name": "Salade César", "description": "Salade avec poulet, parmesan et croûtons" },
     { "id": 4, "name": "Pâtes à la bolognaise", "description": "Pâtes avec sauce bolognaise" },
-    { "id": 5, "name": "Sushi", "description": "Assortiment de sushi" }
+    { "id": 5, "name": "Sushi", "description": "Assortiment de sushi" },
+    { "id": 6, "name": "Tacos", "description": "Tacos avec viande, légumes et sauce" }
 ]
