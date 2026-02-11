@@ -11,7 +11,7 @@ steps:
     args:
       - 'build'
       - '-f'
-      - 'dev.dockerfile'
+      - 'Dockerfile'
       - '-t'
       - 'gcr.io/$PROJECT_ID/mini-app-nestjs:$SHORT_SHA'
       - '.'
