@@ -14,7 +14,7 @@ export class AppController {
   @Get('api/food')
   async getFoodList() {
     try {
-      const path = join(__dirname, '..', 'foods', 'data', 'food.json');
+      const path = join(process.cwd(), 'src', 'foods', 'data', 'food.json');
       console.log('Reading food data from:', path);
       const foodData = await readFile(path, 'utf-8');
       console.log('Food data retrieved successfully', foodData);
