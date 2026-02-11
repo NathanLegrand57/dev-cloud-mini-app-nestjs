@@ -1,6 +1,7 @@
 import { Controller, Get, Post, Put, Body, Param } from '@nestjs/common';
 import { AppService } from './app.service';
 import { readFile } from 'node:fs/promises';
+import { join } from 'path';
 
 @Controller()
 export class AppController {
@@ -13,7 +14,8 @@ export class AppController {
   @Get('api/food')
   async getFoodList() {
     try {
-      const path = 'src/foods/data/food.json';
+      const path = join(__dirname, '..', 'foods', 'data', 'food.json');
+      console.log('Reading food data from:', path);
       const foodData = await readFile(path, 'utf-8');
       console.log('Food data retrieved successfully', foodData);
       return JSON.parse(foodData);
