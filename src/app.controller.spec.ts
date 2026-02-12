@@ -30,4 +30,39 @@ describe('AppController', () => {
       expect(result[0]).toHaveProperty('description');
     });
   });
+
+  describe('deleteFood', () => {
+    it('should return success when deleting an existing food', async () => {
+      const fs = require('node:fs/promises');
+      jest
+        .spyOn(fs, 'readFile')
+        .mockResolvedValue(
+          JSON.stringify([{ id: 1, name: 'Pizza', description: 'Test' }]),
+        );
+      jest.spyOn(fs, 'writeFile').mockResolvedValue(undefined);
+
+      const result = await appController.deleteFood('1');
+
+      expect(result).toEqual({
+        message: 'Food deleted successfully',
+        deleted: true,
+      });
+    });
+
+    it('should return "not found" when deleting a non-existing food', async () => {
+      const fs = require('node:fs/promises');
+      jest
+        .spyOn(fs, 'readFile')
+        .mockResolvedValue(
+          JSON.stringify([{ id: 1, name: 'Pizza', description: 'Test' }]),
+        );
+
+      const result = await appController.deleteFood('99');
+
+      expect(result).toEqual({
+        message: 'Food not found',
+        deleted: false,
+      });
+    });
+  });
 });
