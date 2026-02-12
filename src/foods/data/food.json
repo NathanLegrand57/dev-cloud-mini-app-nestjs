@@ -4,7 +4,11 @@
     "name": "Pizza 4 fromages",
     "description": "Pizza avec 4 fromages"
   },
-  { "id": 2, "name": "Classic burger", "description": "Burger classique" },
+  {
+    "id": 2,
+    "name": "Classic burger",
+    "description": "Burger classique"
+  },
   {
     "id": 3,
     "name": "Salade César",
@@ -15,7 +19,11 @@
     "name": "Pâtes à la bolognaise",
     "description": "Pâtes avec sauce bolognaise"
   },
-  { "id": 5, "name": "Sushi", "description": "Assortiment de sushi" },
+  {
+    "id": 5,
+    "name": "Sushi",
+    "description": "Assortiment de sushi"
+  },
   {
     "id": 6,
     "name": "Tacos",
@@ -35,10 +43,5 @@
     "id": 9,
     "name": "Riz cantonais",
     "description": "Riz sauté avec légumes, œufs et viande"
-  },
-  {
-    "id": 10,
-    "name": "Tarte aux pommes",
-    "description": "Tarte sucrée avec des pommes"
   }
 ]
