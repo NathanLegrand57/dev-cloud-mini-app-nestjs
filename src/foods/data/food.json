@@ -40,30 +40,5 @@
     "id": 10,
     "name": "Tarte aux pommes",
     "description": "Tarte sucrée avec des pommes"
-  },
-  {
-    "id": 11,
-    "name": "Lasagnes",
-    "description": "Lasagnes avec viande, sauce tomate et béchamel"
-  },
-  {
-    "id": 12,
-    "name": "Moussaka",
-    "description": "Gratin d'aubergines avec viande hachée et béchamel"
-  },
-  {
-    "id": 13,
-    "name": "Pad Thaï",
-    "description": "Nouilles sautées avec crevettes, tofu et cacahuètes"
-  },
-  {
-    "id": 14,
-    "name": "Ratatouille",
-    "description": "Ragoût de légumes provençal"
-  },
-  {
-    "id": 15,
-    "name": "Steak frites",
-    "description": "Steak accompagné de frites"
   }
 ]

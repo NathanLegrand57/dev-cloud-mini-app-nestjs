@@ -5,12 +5,11 @@ import { join } from 'path';
 
 @Controller()
 export class AppController {
-
   @Get('api/health')
   getHealth(): object {
     return { status: 'ok' };
   }
-// Test
+
   @Get('api/food')
   async getFoodList() {
     try {
